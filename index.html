@@ -20,6 +20,20 @@
     
     <!-- Chart.js for Business Intelligence Dashboards -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Disable Right Click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    document.onkeydown = function (e) {
+        if (e.keyCode == 123 || 
+           (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) ||
+           (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+            e.preventDefault();
+            return false;
+        }
+    }
+</script>
 
     <style>
         /* ==========================================
